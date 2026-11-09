@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Build SDL2 Project",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "-std=c++17",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "-lmingw32",
+        "-lSDL2main",
+        "-lSDL2",
+        "-lSDL2_ttf"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
